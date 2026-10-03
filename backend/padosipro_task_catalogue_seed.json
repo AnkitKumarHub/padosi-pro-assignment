@@ -1,0 +1,136 @@
+{
+  "categories": [
+    {
+      "name": "Errands & Daily Tasks",
+      "description": "Bills, banks, documents, government work",
+      "tasks": [
+        {
+          "name": "Pickups & Deliveries",
+          "description": "Courier pickup/drop · Grocery pickup & restocking · Medicine pickup & refills"
+        },
+        {
+          "name": "Payments & Renewals",
+          "description": "Subscription renewals handling · Bill payments (electricity, water, gas, society)"
+        },
+        {
+          "name": "Documents & Government",
+          "description": "Queue standing (banks, govt offices, temples) · SIM replacement & activation help · Document printing, scanning, notarization"
+        },
+        {
+          "name": "Shopping",
+          "description": "Gift shopping & returns"
+        }
+      ]
+    },
+    {
+      "name": "Home Services",
+      "description": "AC, plumbing, electrical, cleaning, repairs",
+      "tasks": [
+        {
+          "name": "Cleaning",
+          "description": "Deep cleaning & regular cleaning"
+        },
+        {
+          "name": "Repairs",
+          "description": "Furniture assembly · Handyman on-call services · Painting & carpentry work"
+        },
+        {
+          "name": "Appliances & Utilities",
+          "description": "AC servicing & installation · Electrical work & appliance fixing · Gas pipeline inspection"
+        },
+        {
+          "name": "Property & Society",
+          "description": "Home inspection before travel · Society compliance work"
+        }
+      ]
+    },
+    {
+      "name": "Travel & Tourism",
+      "description": "Flights, hotels, visas, transfers, itineraries",
+      "tasks": [
+        {
+          "name": "Book Travel",
+          "description": "Hotel & homestay selection · Itinerary planning & rescheduling · Flight booking & rebooking"
+        },
+        {
+          "name": "On-Trip Support",
+          "description": "Language & local guide support · Luggage handling & storage · SIM card & connectivity setup"
+        },
+        {
+          "name": "Documents & Visa",
+          "description": "Permit & entry pass coordination · Visa document preparation support"
+        },
+        {
+          "name": "Local Transport",
+          "description": "Airport pickup/drop coordination · Local cab & driver arrangement"
+        }
+      ]
+    },
+    {
+      "name": "Events & Management",
+      "description": "Weddings, décor, catering, photography",
+      "tasks": [
+        {
+          "name": "Planning & Venue",
+          "description": "Venue shortlisting & booking · Budget tracking & vendor payments"
+        },
+        {
+          "name": "Vendors & Services",
+          "description": "Photography & videography booking · Religious rituals setup · Vendor coordination (decor, catering, sound)"
+        },
+        {
+          "name": "Guests",
+          "description": "Gift & return gift management · Guest list & RSVP management · Travel & stay for guests"
+        },
+        {
+          "name": "Event Day & After",
+          "description": "Last-minute issue handling · Outfit & styling coordination · Event day logistics coordination"
+        }
+      ]
+    },
+    {
+      "name": "Workforce Management",
+      "description": "Maids, cooks, drivers, nannies, payroll",
+      "tasks": [
+        {
+          "name": "Hire Staff",
+          "description": "Temporary staff arrangement · Maid onboarding & replacement · Driver hiring & verification"
+        },
+        {
+          "name": "Staff Records & Payroll",
+          "description": "Staff document management · Attendance tracking · Salary & leave tracking"
+        },
+        {
+          "name": "Verification",
+          "description": "Police verification handling"
+        },
+        {
+          "name": "Replacement & Exit",
+          "description": "Conflict resolution support · Exit & transition support · Cook scheduling & backup"
+        }
+      ]
+    },
+    {
+      "name": "Digital & Tech Help",
+      "description": "WiFi, CCTV, smart locks, device repair",
+      "tasks": [
+        {
+          "name": "Device Setup",
+          "description": "Device troubleshooting · Phone & laptop setup · Smart TV & home setup"
+        },
+        {
+          "name": "Internet & Home Tech",
+          "description": "Wi-Fi & router installation"
+        },
+        {
+          "name": "Accounts & Data",
+          "description": "Cloud storage management · Data backup & recovery · Email & account setup"
+        },
+        {
+          "name": "Safety & Support",
+          "description": "Cyber safety assistance · Parental control configuration · App installation & training"
+        }
+      ]
+    }
+  ]
+}
