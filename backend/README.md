@@ -137,3 +137,12 @@ Tests (when present): `pnpm test` from this directory.
 ## Errors and API shape
 
 JSON errors follow a shared shape (`code`, `message`, optional `fields`). Codes are defined in the OpenAPI spec and handlers under `src/lib/errors.ts` and route modules. Use **/api/v1/docs** as the authoritative list of endpoints and response schemas when the server is running.
+
+## Postman
+
+With `docker compose up`, import from the repo root:
+
+- [`postman/PadosiPro-API.postman_collection.json`](../postman/PadosiPro-API.postman_collection.json)
+- [`postman/PadosiPro-Local.postman_environment.json`](../postman/PadosiPro-Local.postman_environment.json)
+
+Select the **PadosiPro Local** environment. **Login** stores `accessToken`; paste the OTP from Mailpit into `otpCode` before **Verify email**. Change `testEmail` if register returns 409.

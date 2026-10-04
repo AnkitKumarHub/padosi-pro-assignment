@@ -255,6 +255,7 @@ padosi-pro-assignment/
 │   ├── eas.json             # EAS build profiles
 │   └── README.md            # Deep dive: Metro, Server URL, EAS
 ├── docker-compose.yml       # postgres, mailpit, api
+├── postman/                 # Postman collection + local environment (optional)
 ├── .env.example             # Placeholders only (copy to .env at root)
 ├── DESIGN.md                # One-page architecture and trade-offs
 └── README.md                # This file
@@ -269,6 +270,7 @@ padosi-pro-assignment/
 | [DESIGN.md](./DESIGN.md) | Architecture, trade-offs, out of scope, next steps |
 | [backend/README.md](./backend/README.md) | Docker vs `pnpm dev`, secrets, migrations, API layout |
 | [mobile/README.md](./mobile/README.md) | Server URL, emulator vs device, EAS profiles, app folders |
+| [postman/](./postman/) | Import collection + environment for manual API testing in Postman |
 | http://localhost:3000/api/v1/docs | Endpoint and error contract (server running) |
 
 ---
