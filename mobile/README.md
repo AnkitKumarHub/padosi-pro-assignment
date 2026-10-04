@@ -11,6 +11,7 @@ Expo SDK 55 app using **Expo Router** (`src/app/`). Session JWT and optional API
 - [API base URL](#api-base-url)
 - [Manual test flow](#manual-test-flow)
 - [EAS Build (Android APK)](#eas-build-android-apk)
+- [After you install the APK (physical device)](#after-you-install-the-apk-physical-device)
 - [App structure](#app-structure)
 
 ---
@@ -42,7 +43,7 @@ Default when nothing is saved on device (`src/api/client.ts`):
 | Where the app runs | Default base URL |
 | --- | --- |
 | Android emulator on same PC as API | `http://10.0.2.2:3000/api/v1` |
-| Physical device / sideloaded APK | Set in app: **Login** (or bootstrap) -> **Server URL** |
+| Physical device / sideloaded APK | **Server URL** in the app (required after APK install) — see [After you install the APK](#after-you-install-the-apk-physical-device) |
 
 Example for a phone on Wi-Fi (replace with your PC IPv4 from `ipconfig` or the Metro banner):
 
@@ -89,7 +90,39 @@ npx eas-cli@latest build --platform android --profile preview
 | **preview** | Submission-style **APK** (`buildType: apk`, internal distribution) |
 | **development** | Dev client; pair with `npx expo start --dev-client` |
 
-Install the artifact from the Expo dashboard, or use the submission APK: [Google Drive (`padosipro.apk`)](https://drive.google.com/file/d/1hjVPTLAa79-mT7oc4EHzJEQnpnmMtfky/view?usp=sharing). Walkthrough: [demo video on Drive](https://drive.google.com/file/d/1DdRpN9acnBiLgTV_FxVdNzJuhOsH_6kM/view?usp=sharing). Reviewers run their own API locally and set **Server URL** on a physical device.
+Install the artifact from the Expo dashboard, or use the submission APK: [Google Drive (`padosipro.apk`)](https://drive.google.com/file/d/1hjVPTLAa79-mT7oc4EHzJEQnpnmMtfky/view?usp=sharing). Walkthrough: [demo video on Drive](https://drive.google.com/file/d/1DdRpN9acnBiLgTV_FxVdNzJuhOsH_6kM/view?usp=sharing). Reviewers run their own API locally (`docker compose up --build` on a PC) and point the phone at that machine over Wi-Fi.
+
+### After you install the APK (physical device)
+
+The APK does **not** know your computer's IP. On first open you land on **Login** (or **Register**). Before signing up, set where the API lives:
+
+1. On **Login**, tap **Server URL** (muted link under the form). You can also open it from the welcome screen if the app cannot reach the server (**Try again** flow).
+2. Replace the default with your **development PC's LAN IPv4 address**, port **3000**, and the API prefix **`/api/v1`**.
+
+Use this shape (one line, no trailing slash):
+
+```text
+http://<YOUR-PC-IP>:3000/api/v1
+```
+
+**Example:** if `ipconfig` shows `192.168.1.42` on Wi-Fi:
+
+```text
+http://192.168.1.42:3000/api/v1
+```
+
+3. Tap **Save**. Every API call uses this base URL until you change it again.
+
+**Checklist before register/login on the phone:**
+
+| Step | What to verify |
+| --- | --- |
+| API running | `docker compose up --build` on the PC (same Wi-Fi as the phone) |
+| Firewall | Windows allows inbound TCP **3000** on private networks |
+| Browser test | On the phone, open `http://<YOUR-PC-IP>:3000/api/v1/health` — you should see JSON with `"status":"ok"` |
+| Server URL in app | Matches that same host and includes **`/api/v1`** (not just `http://192.168.x.x:3000`) |
+
+The built-in default `http://10.0.2.2:3000/api/v1` only works on an **Android emulator** on the same PC as Docker, not on a real device with a sideloaded APK.
 
 ### EAS upload on Windows
 
@@ -109,4 +142,3 @@ src/
   lib/           Validation, onboarding helpers
 ```
 
-Further UI notes (optional): [`UI-DESIGN.md`](./UI-DESIGN.md) if present in your tree.
