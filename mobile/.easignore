@@ -1,0 +1,59 @@
+# .easignore replaces .gitignore for the EAS upload. Keep every ignore from .gitignore.
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# generated native folders
+/ios
+/android
+
+# Editor, agent, and design files. The bundle only needs src, assets, and app config.
+**/.agents/
+**/.aider-desk/
+.agents/
+.aider-desk/
+.claude/
+.vscode/
+design/
+PADOSIPRO-MOBILE-UI-DESIGN-FINAL.md
+UI-DESIGN.md
+USER-FLOW-AND-WIREFRAMES.md
+SKILL*.md
+skills-lock.json
+eslint.config.js
+*.md

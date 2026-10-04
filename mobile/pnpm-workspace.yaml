@@ -1,0 +1,5 @@
+packages: []
+# unrs-resolver compiles the native module resolver used by the Expo ESLint config.
+# pnpm 11 blocks install scripts until they are approved here.
+allowBuilds:
+  unrs-resolver: true
