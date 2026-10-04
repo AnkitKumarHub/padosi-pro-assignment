@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-labelledby="t">
+  <title id="t">PadosiPro app icon</title>
+  <rect width="1024" height="1024" fill="#141414"/>
+  <g transform="translate(192 202) scale(10)">
+    <path d="M32 7 57 28V55H7V28Z" fill="#3E5F44" stroke="#3E5F44" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M25 49V25H33a7.5 7.5 0 0 1 0 15H25" fill="none" stroke="#F0F0F0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
